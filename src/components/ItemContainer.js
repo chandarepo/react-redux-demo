@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { connect } from 'react-redux'
 import { buyCake, buyIceCream } from '../redux'
 
@@ -35,3 +35,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ItemContainer)
+*/

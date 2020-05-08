@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+/*import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { buyCake } from '../redux'
 
@@ -29,3 +29,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(NewCakeContainer)
+*/

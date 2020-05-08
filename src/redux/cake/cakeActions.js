@@ -1,4 +1,4 @@
-import { BUY_CAKE } from './cakeTypes'
+/*import { BUY_CAKE } from './cakeTypes'
 
 export const buyCake = (number = 1) => {
   return {
@@ -6,3 +6,4 @@ export const buyCake = (number = 1) => {
     payload: number
   }
 }
+*/

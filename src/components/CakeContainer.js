@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { connect } from 'react-redux'
 import { buyCake } from '../redux'
 
@@ -27,3 +27,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(CakeContainer)
+
+*/

@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { buyCake } from '../redux'
 
@@ -14,3 +14,4 @@ function HooksCakeContainer () {
 }
 
 export default HooksCakeContainer
+*/

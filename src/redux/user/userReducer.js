@@ -4,7 +4,7 @@ import {
   FETCH_USERS_FAILURE
 } from './userTypes'
 
-const initialState = {
+/*const initialState = {
   loading: false,
   users: [],
   error: ''
@@ -34,3 +34,4 @@ const reducer = (state = initialState, action) => {
 }
 
 export default reducer
+*/

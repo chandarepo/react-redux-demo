@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+/*import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchUsers } from '../redux'
 
@@ -38,3 +38,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(UsersContainer)
+*/

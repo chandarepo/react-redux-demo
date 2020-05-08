@@ -1,10 +1,9 @@
 #This project Connects back end SpringBoot API.
+[API](https://github.com/chandarepo/SpringBootProject) 
 
 It converts a given decimal number to Roman, binary, hexa and Hindi
 
 Used React-Hook, Redux-thunk, Axios.
 Materil-ui for individual component
 
-to_do: state managed through Redux-saga, 
-
-to run ```npm install```, after git clone
+ ```npm install```, after git clone

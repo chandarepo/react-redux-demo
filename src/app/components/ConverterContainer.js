@@ -58,7 +58,7 @@ function ConverterContainer (props) {
   
   return (
       <div  style={styles.container}>  
-          <Card >
+          <Card  style={styles.card}>
             <HeaderComponent/>
             <RadioInputComponent format={format} 
               setFormat={setFormat}/>

@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './ConverterContainer.style'
 
 const RadioInputComponent = (props) => {
-    const inputs = [["ROMAN", "ROMAN"], ["BINARY", "BINARY"], ["HEXADECIMAL", "HEXADECIMAL"]]    
+    const inputs = [["ROMAN", "ROMAN"], ["BINARY", "BINARY"], ["HEXADECIMAL", "HEXADECIMAL"] ,["HINDI", "HINDI"]]    
     return (
         <div  style={styles.radioWrapper}>
-          <label> Convert Type: </label>
+          <label> Convert To: </label>
           {
             inputs.map(([label, value], i) => (
               <div key={ i }>

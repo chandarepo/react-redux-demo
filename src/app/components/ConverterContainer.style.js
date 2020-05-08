@@ -24,8 +24,10 @@ const styles = {
         padding: '5px',
         maxWidth: '500px',
         margin: '0 auto',
-        background: 'grey',
-        padding: '10px 0'
+        background: '#e9f0e6',
+        padding: '5px 0',
+        marginTop: '15px',
+        
       },
       inputWrapper :{
         display: 'flex',
@@ -46,5 +48,8 @@ const styles = {
         margin: '0 auto',
         padding: '10px 0'
       },
+      card : {
+        background:'#e9f0e6'
+      }
 }
 export default styles;

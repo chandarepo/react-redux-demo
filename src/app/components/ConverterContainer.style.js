@@ -44,7 +44,6 @@ const styles = {
         padding: '10px',
         maxWidth: '200px',
         margin: '0 auto',
-        background: 'grey',
         padding: '10px 0'
       },
 }

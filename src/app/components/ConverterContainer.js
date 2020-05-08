@@ -1,9 +1,31 @@
 import React, { useState } from 'react'
+
+import styles from './ConverterContainer.style'
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+
 import { connect } from 'react-redux'
 import { convertDecimal, resetDecimal} from '../../redux'
-import styles from './ConverterContainer.style'
+
+import HeaderComponent from './HeaderComponent'
+import FooterComponent from './FooterComponent'
+import ButtonsComponent from './ButtonsComponent'
+import FormInputComponent from './FormInputComponent'
+import RadioInputComponent from './RadioInputComponents'
+
+
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 600,
+  },
+  media: {
+    height: 400,
+  },
+});
 
 function ConverterContainer (props) {
+  const classes = useStyles();
   const [number, setNumber] = useState(1);
   const [format, setFormat] = useState('ROMAN');
 
@@ -35,42 +57,26 @@ function ConverterContainer (props) {
   }
   
   return (
-    <div  style={styles.container}>  
-    
-      <div >
-        <div> 
-          <h2>Decimal Conversion Application </h2> 
-        </div>
-        <hr/>
-      </div>
-      
-      <div>
-        <RadioInputs />
-      </div> 
-
-      <div>
-        <label> Decimal Input: </label>
-        <input type='number' value={number} onChange={e => setNumber(e.target.value)} />
-      </div> 
-
-      <div style={styles.btnWrapper}>
-        <div style={styles.buttonWrapper}>
-          <button onClick={() => props.convertDecimal(number, format)}>Convert</button>
-        </div>
-        <div style={styles.buttonWrapper}>
-          <button onClick={() => reset()}> Reset</button>
-      </div>
-        
+      <div  style={styles.container}>  
+          <Card >
+            <HeaderComponent/>
+            <RadioInputComponent format={format} 
+              setFormat={setFormat}/>
+            <FormInputComponent number={number} 
+                setNumber ={setNumber} />
+            <div style={styles.btnWrapper}>
+              <ButtonsComponent number={number} 
+                format={format}
+                convertDecimal={props.convertDecimal} 
+                reset={reset}/>   
+            </div>
+            <div >
+              <hr/>
+              <FooterComponent convertedValue={props.convertedValue}/>
+            </div>
+          </Card>
       </div>
 
-      <div >
-        <hr/>
-        <div> 
-          <h2>Converted Result: {props.convertedValue} </h2> 
-        </div>
-      </div>
-
-    </div>
   )
 }
 

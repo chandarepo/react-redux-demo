@@ -1,19 +1,16 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import { convertDecimal, resetDecimal} from '../../redux'
 
 import styles from './ConverterContainer.style'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-
-import { connect } from 'react-redux'
-import { convertDecimal, resetDecimal} from '../../redux'
 
 import HeaderComponent from './HeaderComponent'
 import FooterComponent from './FooterComponent'
 import ButtonsComponent from './ButtonsComponent'
 import FormInputComponent from './FormInputComponent'
 import RadioInputComponent from './RadioInputComponents'
-
-
 
 const useStyles = makeStyles({
   root: {
@@ -35,27 +32,6 @@ function ConverterContainer (props) {
     props.resetDecimal();
   }
 
-  const RadioInputs = (props) => {
-    const inputs = [["ROMAN", "ROMAN"], ["BINARY", "BINARY"], ["HEXADECIMAL", "HEXADECIMAL"]]    
-    return (
-        <div  style={styles.radioWrapper}>
-          <label> Convert Type: </label>
-          {
-            inputs.map(([label, value], i) => (
-              <div key={ i }>
-                <input type="radio"
-                        checked={ format === value } 
-                        onChange={e => setFormat(e.target.value) } 
-                        value={ value } /> 
-                    { label }
-              </div>
-              )
-            )
-          }
-        </div>
-      )
-  }
-  
   return (
       <div  style={styles.container}>  
           <Card  style={styles.card}>
@@ -76,7 +52,6 @@ function ConverterContainer (props) {
             </div>
           </Card>
       </div>
-
   )
 }
 

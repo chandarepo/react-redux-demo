@@ -7,3 +7,4 @@ Materil-ui for individual component
 
 to_do: state managed through Redux-saga, 
 
+to run ```npm install```, after git clone

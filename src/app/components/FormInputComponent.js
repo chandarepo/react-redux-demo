@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
 const maxCheck = (num, max=1000)=>{
-  if (num > max){
+  while (num > max){
     num = Math.floor(num/10);
   }
   return num;

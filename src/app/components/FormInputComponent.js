@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
 const maxCheck = (num, max=1000)=>{
+  num = Math.round(num);
   while (num > max){
     num = Math.floor(num/10);
   }
@@ -14,12 +15,12 @@ function FormInputComponent (props) {
     <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
             <label> Decimal Input: </label>
-            <TextField
+            <TextField type="number"
                 id="standard-number"
                 defaultValue="1"
                 value={props.number} 
-                inputProps={{ maxLength:4 }}
-                onChange={e => props.setNumber(maxCheck(Math.round(e.target.value)))} />
+                inputProps={{ min:0, max:1000}}
+                onChange={e => props.setNumber(maxCheck(e.target.value))} />
         </Typography>
     </CardContent>
   )

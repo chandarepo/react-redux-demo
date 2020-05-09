@@ -3,7 +3,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
-const maxLength = (num, max=1000)=>{
+const maxCheck = (num, max=1000)=>{
   if (num > max){
     num = Math.floor(num/10);
   }
@@ -19,7 +19,7 @@ function FormInputComponent (props) {
                 defaultValue="1"
                 value={props.number} 
                 inputProps={{ maxLength:4 }}
-                onChange={e => props.setNumber(maxLength(Math.round(e.target.value)))} />
+                onChange={e => props.setNumber(maxCheck(Math.round(e.target.value)))} />
         </Typography>
     </CardContent>
   )

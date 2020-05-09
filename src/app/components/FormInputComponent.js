@@ -3,6 +3,12 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
+const maxLength = (num, max=1000)=>{
+  if (num > max){
+    num = Math.floor(num/10);
+  }
+  return num;
+};
 function FormInputComponent (props) {
   return (   
     <CardContent>
@@ -12,7 +18,8 @@ function FormInputComponent (props) {
                 id="standard-number"
                 defaultValue="1"
                 value={props.number} 
-                onChange={e => props.setNumber(Math.round(e.target.value))} />
+                inputProps={{ maxLength:4 }}
+                onChange={e => props.setNumber(maxLength(Math.round(e.target.value)))} />
         </Typography>
     </CardContent>
   )

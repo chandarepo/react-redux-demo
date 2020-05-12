@@ -11,6 +11,7 @@ import FooterComponent from './FooterComponent'
 import ButtonsComponent from './ButtonsComponent'
 import FormInputComponent from './FormInputComponent'
 import RadioInputComponent from './RadioInputComponents'
+import ConverterForm from './../forms/ConverterForm'
 
 const useStyles = makeStyles({
   root: {
@@ -36,16 +37,14 @@ function ConverterContainer (props) {
       <div  style={styles.container}>  
           <Card  style={styles.card}>
             <HeaderComponent/>
-            <RadioInputComponent format={format} 
-              setFormat={setFormat}/>
-            <FormInputComponent number={number} 
-                setNumber ={setNumber} />
-            <div style={styles.btnWrapper}>
-              <ButtonsComponent number={number} 
-                format={format}
+            <ConverterForm format={format} 
+                setFormat={setFormat}
+                number={number} 
+                setNumber ={setNumber}
                 convertDecimal={props.convertDecimal} 
-                reset={reset}/>   
-            </div>
+                resetDecimal={props.resetDecimal}
+                styles={styles}
+            />
             <div >
               <hr/>
               <FooterComponent convertedValue={props.convertedValue}/>

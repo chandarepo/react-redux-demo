@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
-import StyledButton from './StyledButton';
+//import StyledButton from './StyledButton';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const useStyles = makeStyles({
@@ -19,19 +19,21 @@ const useStyles = makeStyles({
 
 function ButtonsComponent (props) {
     const classes = useStyles();
-  return (   
-    <CardActions>
-        <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-            <Button size="medium" 
-                onClick={() => props.convertDecimal(props.number, props.format)}>
-                Convert
-            </Button>
-            <Button size="medium" 
-                onClick={() => props.reset()}>
-                Reset
-            </Button>
-        </ButtonGroup>
-  </CardActions>
+  return (
+    <div style={props.styles.btnWrapper}> 
+      <CardActions>
+          <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
+              <Button size="medium" 
+                  onClick={() => props.convertDecimal(props.number, props.format)}>
+                  Convert
+              </Button>
+              <Button size="medium" 
+                  onClick={() => props.reset()}>
+                  Reset
+              </Button>
+          </ButtonGroup>
+      </CardActions>
+    </div>  
   )
 }
 export default ButtonsComponent;

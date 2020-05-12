@@ -2,6 +2,7 @@ import React from 'react'
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import {reduxForm, Field} from 'redux-form';
 
 const maxCheck = (num, max=1000)=>{
   num = Math.round(num);
@@ -10,6 +11,7 @@ const maxCheck = (num, max=1000)=>{
   }
   return num;
 };
+
 function FormInputComponent (props) {
   return (   
     <CardContent>
@@ -26,5 +28,7 @@ function FormInputComponent (props) {
   )
 }
 
-export default FormInputComponent;
+export default reduxForm({
+  form:'numberConverterForm'
+})(FormInputComponent);
 
